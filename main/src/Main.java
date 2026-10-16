@@ -8,7 +8,7 @@ public class Main {
 
         int opcion = 0;
 
-        while (opcion != 9) {
+        while (opcion != 11) {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null, """
                 ================ CINEPLUS ================
                 1. Registrar película
