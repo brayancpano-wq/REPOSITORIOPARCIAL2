@@ -237,6 +237,7 @@ public class Cine {
     public void setLisCineVenta(List<Venta> lisCineVenta) {
         this.listCineVenta = lisCineVenta;
     }
+
     @Override
     public String toString() {
         return "Cine{" +
