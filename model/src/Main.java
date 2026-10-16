@@ -10,7 +10,6 @@ import co.edu.uniquindio.poo.model.Venta;
 import javax.swing.JOptionPane;
 
 public class Main {
-
     public static void main(String[] args) {
 
         Cine cine = new Cine("CinePlus", 90098001, "Armenia, Quindío");
