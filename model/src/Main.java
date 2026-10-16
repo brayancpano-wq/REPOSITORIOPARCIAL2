@@ -13,7 +13,6 @@ public class Main {
     public static void main(String[] args) {
 
         Cine cine = new Cine("CinePlus", 90098001, "Armenia, Quindío");
-
         int opcion = 0;
 
         while (opcion != 9) {
