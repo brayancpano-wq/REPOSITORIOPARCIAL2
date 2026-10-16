@@ -1,3 +1,8 @@
+/**
+ * Clase abstracta de una
+ * persona que va al cine
+ */
+
 public abstract class Persona {
     public int documento;
     public String nombre;
@@ -45,6 +50,13 @@ public abstract class Persona {
                 ", telefono='" + telefono + '\'' +
                 '}';
     }
+    /**
+     * Metodo constructor de la clase persona
+     * @param documento de la persona
+     * @param nombre de la persona
+     * @param correo de la persona
+     * @param telefono de la persona
+     */
 
     public Persona(int documento, String nombre, String correo, String telefono) {
         this.documento = documento;

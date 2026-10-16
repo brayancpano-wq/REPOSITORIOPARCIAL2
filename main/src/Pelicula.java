@@ -1,3 +1,8 @@
+/**
+ * Clase de el catalgo de peliculas
+ * de el cine
+ */
+
 public class Pelicula {
     public int codigo;
     public String titulo;
@@ -57,6 +62,15 @@ public class Pelicula {
                 ", clasificacion='" + clasificacion + '\'' +
                 '}';
     }
+
+    /**
+     * Metodo constructor de la clase venta
+     * @param codigo de la pelicula
+     * @param titulo de la pelicula
+     * @param duracion de la pelicula
+     * @param genero de la pelicula
+     * @param clasificacion de la pelicula
+     */
 
     public Pelicula(int codigo, String titulo, int duracion, GENERO genero, String clasificacion){
         this.codigo = codigo;

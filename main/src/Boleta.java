@@ -3,7 +3,13 @@ public class Boleta  {
     public int numeroAsiento;
     public int numeroFila;
     public double valorIndividual;
-
+    /**
+     * Metodo constructor de la clase boleta
+     * @param codigo de la boleta
+     * @param numeroAsiento de la boleta
+     * @param numeroFila de la boleta
+     * @param valorIndividual de la boleta
+     */
     public Boleta ( int codigo,int numeroAsiento, int numeroFila, double valorIndividual){
         this.codigo=codigo;
         this.numeroAsiento=numeroAsiento;

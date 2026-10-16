@@ -1,7 +1,18 @@
+/**
+ * Clase hija de Persona
+ * que determina si es cliente
+ * o es nuevo
+ */
+
 public class cliente extends Persona {
     public int codigoAfiliacion;
     public double porcentajeDescuento;
 
+    /**
+     * Metodo constructor de la clase hija cliente
+     * @param codigoAfiliacion de el cliente
+     * @param porcentajeDescuento de el cliente
+     */
     public cliente(int documento, String nombre, String correo, String telefono, int codigoAfiliacion, double porcentajeDescuento) {
         super(documento, nombre, correo, telefono);
         this.codigoAfiliacion = codigoAfiliacion;

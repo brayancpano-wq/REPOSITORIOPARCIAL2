@@ -1,3 +1,8 @@
+/**
+ * Clase para una sala
+ * de cine
+ */
+
 public class Sala {
     public int codigo;
     public String nombre;
@@ -45,7 +50,13 @@ public class Sala {
                 ", tiposala=" + tiposala +
                 '}';
     }
-
+    /**
+     * Metodo constructor de la clase sala
+     * @param codigo de la sala
+     * @param nombre de la sala
+     * @param capacidadMaxima de la sala
+     * @param tiposala de la sala
+     */
     public Sala(int codigo, String nombre, int capacidadMaxima, TIPOSALA tiposala) {
         this.codigo = codigo;
         this.nombre = nombre;

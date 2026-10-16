@@ -1,9 +1,22 @@
+/**
+ * Clase para registrar las ventas
+ * de un cine
+ */
+
 public class Venta {
     public int codigo;
     public String fechaRealizacion;
     public double valorTotal;
 
-    public Venta ( int código, String fechaRealizacion, double valorTotal){
+    /**
+     * Metodo constructor de la clase venta
+     * @param codigo de la venta
+     * @param fechaRealizacion de la venta
+     * @param valorTotal de la venta
+     */
+
+
+    public Venta ( int codigo, String fechaRealizacion, double valorTotal){
 
     this.codigo=codigo;
     this.fechaRealizacion= fechaRealizacion;

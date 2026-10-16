@@ -1,7 +1,20 @@
+/**
+* Clase hija de Persona
+ * que determina si es
+ * empleado del cine
+ */
+
 public class operario extends Persona{
     public int codigoEmpleado;
     public String fechaContratacion;
     public double salarioBasico;
+
+    /**
+     * Metodo constructor de la clase hija operario
+     * @param codigoEmpleado de el operario
+     * @param fechaContratacion de el operario
+     * @param salarioBasico de el operario
+     */
 
     public operario(int documento, String nombre, String correo, String telefono, int codigoEmpleado, String fechaContratacion, double salarioBasico) {
         super(documento, nombre, correo, telefono);

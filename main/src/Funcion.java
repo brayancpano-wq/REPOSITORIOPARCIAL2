@@ -1,3 +1,8 @@
+/**
+ * Clase para una funcion
+ * de el cine
+ */
+
 public class Funcion {
     public int codigo;
     public String fecha;
@@ -45,7 +50,13 @@ public class Funcion {
                 ", precioBase=" + precioBase +
                 '}';
     }
-
+    /**
+     * Metodo constructor de la clase funcion
+     * @param codigo de la funcion
+     * @param fecha de la funcion
+     * @param horaInicio de la funcion
+     * @param precioBase de la funcion
+     */
     public Funcion(int codigo, String fecha, String horaInicio, double precioBase) {
         this.codigo = codigo;
         this.fecha = fecha;
