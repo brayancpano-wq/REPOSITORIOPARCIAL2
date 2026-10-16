@@ -4,7 +4,7 @@
  * empleado del cine
  */
 
-public class operario extends Persona{
+public class Operario extends Persona{
     public int codigoEmpleado;
     public String fechaContratacion;
     public double salarioBasico;
@@ -16,7 +16,7 @@ public class operario extends Persona{
      * @param salarioBasico de el operario
      */
 
-    public operario(int documento, String nombre, String correo, String telefono, int codigoEmpleado, String fechaContratacion, double salarioBasico) {
+    public Operario(int documento, String nombre, String correo, String telefono, int codigoEmpleado, String fechaContratacion, double salarioBasico) {
         super(documento, nombre, correo, telefono);
         this.codigoEmpleado = codigoEmpleado;
         this.fechaContratacion = fechaContratacion;

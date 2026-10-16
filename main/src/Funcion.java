@@ -2,12 +2,54 @@
  * Clase para una funcion
  * de el cine
  */
+import java.util.ArrayList;
+import java.util.List;
 
 public class Funcion {
     public int codigo;
     public String fecha;
     public String horaInicio;
     public double precioBase;
+
+    private ArrayList<Boleta> listCineBoleta;
+
+    private Sala sala;
+
+    //si un asiento específico (fila y número) está disponible para esta función
+
+    public boolean verificarDisponibilidadAsiento(int fila, int numeroAsiento) {
+        for (Boleta b : listCineBoleta) {
+            if (b.getNumeroFila() == fila && b.getNumeroAsiento() == numeroAsiento) {
+                return false; // El asiento ya está vendido
+            }
+        }
+        return true; // Asiento disponible
+    }
+
+    /**
+     * Registra una boleta vendida para esta función
+     * @param boleta Boleta a registrar
+     * @return true si se agregó con éxito, false si el asiento estaba ocupado
+     */
+    public boolean registrarBoletaVendida(Boleta boleta) {
+        if (verificarDisponibilidadAsiento(boleta.getNumeroFila(), boleta.getNumeroAsiento())) {
+            return listCineBoleta.add(boleta);
+        }
+        return false;
+    }
+
+    // Calcula el porcentaje de ocupación de la función según la capacidad máxima de la sala
+
+    public double calcularPorcentajeOcupacion() {
+        if (sala != null && sala.getCapacidadMaxima() > 0) {
+            return ((double) listCineBoleta.size() / sala.getCapacidadMaxima()) * 100.0;
+        }
+        return 0.0;
+    }
+
+    public double calcularIngresos() {
+        return this.precioBase * this.listCineBoleta.size();
+    }
 
     public int getCodigo() {
         return codigo;
@@ -41,6 +83,14 @@ public class Funcion {
         this.precioBase = precioBase;
     }
 
+    public Sala getSala() {
+        return sala;
+    }
+
+    public void setSala(Sala sala) {
+        this.sala = sala;
+    }
+
     @Override
     public String toString() {
         return "Funcion{" +
@@ -48,6 +98,7 @@ public class Funcion {
                 ", fecha='" + fecha + '\'' +
                 ", horaInicio='" + horaInicio + '\'' +
                 ", precioBase=" + precioBase +
+                ", sala=" + sala +
                 '}';
     }
     /**
@@ -62,7 +113,7 @@ public class Funcion {
         this.fecha = fecha;
         this.horaInicio = horaInicio;
         this.precioBase = precioBase;
-
+        this.sala = sala;
 
     }
 }

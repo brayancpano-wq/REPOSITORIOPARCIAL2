@@ -3,10 +3,15 @@
  * de un cine
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Venta {
     public int codigo;
     public String fechaRealizacion;
     public double valorTotal;
+
+    private ArrayList<Boleta> listCineBoleta;
 
     /**
      * Metodo constructor de la clase venta
@@ -15,6 +20,30 @@ public class Venta {
      * @param valorTotal de la venta
      */
 
+
+    /**
+     * Agrega una boleta a la venta y actualiza el valor total
+     * @param boleta Objeto boleta a registrar
+     */
+    public void agregarBoleta(Boleta boleta) {
+        if (boleta != null) {
+            this.listCineBoleta.add(boleta);
+            this.valorTotal += boleta.getValorIndividual();
+        }
+    }
+
+    /**
+     * Calcula el valor total acumulado de todas las boletas compradas
+     * @return suma de los valores individuales
+     */
+    public double calcularValorTotal() {
+        double total = 0.0;
+        for (Boleta b : listCineBoleta) {
+            total += b.getValorIndividual();
+        }
+        this.valorTotal = total;
+        return total;
+    }
 
     public Venta ( int codigo, String fechaRealizacion, double valorTotal){
 

@@ -4,7 +4,7 @@
  * o es nuevo
  */
 
-public class cliente extends Persona {
+public class Cliente extends Persona {
     public int codigoAfiliacion;
     public double porcentajeDescuento;
 
@@ -13,7 +13,7 @@ public class cliente extends Persona {
      * @param codigoAfiliacion de el cliente
      * @param porcentajeDescuento de el cliente
      */
-    public cliente(int documento, String nombre, String correo, String telefono, int codigoAfiliacion, double porcentajeDescuento) {
+    public Cliente(int documento, String nombre, String correo, String telefono, int codigoAfiliacion, double porcentajeDescuento) {
         super(documento, nombre, correo, telefono);
         this.codigoAfiliacion = codigoAfiliacion;
         this.porcentajeDescuento = porcentajeDescuento;
